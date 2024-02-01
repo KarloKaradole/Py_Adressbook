@@ -7,7 +7,7 @@ def get_last_id() -> int:
     If Addressbook is empty, returns -1
     """
     try:
-        with open("files/addressbook.txt", "r") as file_reader:
+        with open("APP_1/files/addressbook.txt", "r") as file_reader:
             return int(file_reader.readlines()[-1].split(";")[0])
                    
     except Exception as ex:
@@ -19,7 +19,7 @@ def get_last_name(id: int = 0) -> str:
 
 def get_contact(id: int = 0) -> Contact:
     try:
-        with open("files/addressbook.txt", "r") as file_reader:
+        with open("APP_1/files/addressbook.txt", "r") as file_reader:
             lines = file_reader.readlines()
             if id > 0 and id < len(lines):
                 contact_data = lines[id - 1].split(";")

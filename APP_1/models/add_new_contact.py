@@ -18,7 +18,7 @@ class AddUser(Contact):
             entry = f"{last_id};{self.first_name};{self.last_name};{self.phone}\n"
             
             try:  
-                with open("files/addressbook.txt","a") as file_writer:
+                with open("APP_1/files/addressbook.txt","a") as file_writer:
                     file_writer.write(entry)
             except Exception as ex:
                 print(f"Dogodila se greska: {ex}")
