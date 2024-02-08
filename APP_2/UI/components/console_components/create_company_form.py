@@ -4,7 +4,8 @@ def create_company_form():
     title = input("Upisite naziv tvrtke: ")
     vat_id = input("Upisite OIB tvrtke: ")
     
-    FileManager.insert_company(title, vat_id)
+    file_mgr = FileManager()
+    file_mgr.insert_company(title, vat_id)
     
     
     """
